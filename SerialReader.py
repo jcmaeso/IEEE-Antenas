@@ -16,6 +16,9 @@ class SerialReader:
         self.__connected = True
         self.__serial = serial.Serial(port, baud, timeout=0)
 
+    def serial_send(self, data_send):
+        self.__serial.write(data_send)
+
     def launch_read(self):
         self.thread = threading.Thread(target=self.__read_from_port)
         self.thread.start()
