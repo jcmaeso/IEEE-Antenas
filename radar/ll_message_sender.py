@@ -61,7 +61,7 @@ def send(serial,trama,nombre='Trama'):
     # led -> true -> false
     # ganancia -> numero a pincho -> compruebas que está en rango
 
-def system_conf_message(serial, selfTrigDelay="000", led="00", raw="0", agc="1", gain="00", ser2="1", ser1="0", ext="0", st="0", tl="0", p="0", c="0", r="0", dc="1", slf="1", pre="0"):
+def system_conf_message(serial, selfTrigDelay="000", led="01", raw="0", agc="1", gain="00", ser2="1", ser1="0", ext="0", st="1", tl="1", p="0", c="1", r="1", dc="1", slf="1", pre="0"):
     trama=concatenar('S',selfTrigDelay,"000",led,"0000000",raw,"0",agc,gain,ser2,ser1,ext,st,tl,p,c,r,dc,"0",slf,pre)
     send('serial',trama,'System configuration')
     return trama

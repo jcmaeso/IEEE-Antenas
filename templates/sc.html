@@ -1,0 +1,211 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+
+<form action="/sysconfig?registro={{registro}}" method="post">
+    
+    
+    <div class="container">
+            <div class="row">
+                    <div class="col-3">
+                            <p>Trama: {{trama}}</p>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    Self Trigger Delay [ms]: 
+                </div>
+                <div class="col-1">
+                    <select name="selfTrigDelay">
+                            <option value="2" {{std2}}>2</option>
+                            <option value="4" {{std4}}>4</option>
+                            <option value="8" {{std8}}>8</option>
+                            <option value="16" {{std16}}>16</option>
+                            <option value="32" {{std32}}>32</option>
+                            <option value="64" {{std64}}>64</option>
+                            <option value="128" {{std128}}>128</option>
+                            <option value="256" {{std256}}>256</option>
+                    </select>
+              </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                            Led: 
+                        </div>
+              <div class="col-1">
+                    <label class="switch">        
+                            <input type="checkbox" value="1" {{ledChecked}} name="led">
+                            <span class="slider round"></span>
+                    </label>
+              </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                            Raw: 
+                        </div>
+              <div class="col-1">
+                    <label class="switch">        
+                            <input type="checkbox" value="1" {{rawChecked}} name="raw">
+                            <span class="slider round"></span>
+                    </label>
+              </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                            AGC: 
+                        </div>
+              <div class="col-1">
+                    <label class="switch">        
+                            <input type="checkbox" value="1" {{agcChecked}} name="agc">
+                            <span class="slider round"></span>
+                    </label>
+              </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                        Gain [dB]: 
+                    </div>
+                    <div class="col-1">
+                        <select name="gain">
+                                <option value="8" {{gain8}}>8</option>
+                                <option value="21" {{gain21}}>21</option>
+                                <option value="43" {{gain43}}>43</option>
+                                <option value="56" {{gain56}}>56</option>
+                        </select>
+                  </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                            SER2: 
+                        </div>
+                <div class="col-1">
+                    <label class="switch">        
+                            <input type="checkbox" value="1" {{ser2Checked}} name="ser2">
+                            <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                            SER1: 
+                        </div>
+                <div class="col-1">
+                    <label class="switch">        
+                            <input type="checkbox" value="1" {{ser1Checked}} name="ser1">
+                            <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                            EXT: 
+                        </div>
+                <div class="col-1">
+                    <label class="switch">        
+                            <input type="checkbox" value="1" {{extChecked}} name="ext">
+                            <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                            ST: 
+                        </div>
+                <div class="col-1">
+                    <label class="switch">        
+                            <input type="checkbox" value="1" {{stChecked}} name="st">
+                            <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                            TL: 
+                        </div>
+                <div class="col-1">
+                    <label class="switch">        
+                            <input type="checkbox" value="1" {{tlChecked}} name="tl">
+                            <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                            P: 
+                        </div>
+                <div class="col-1">
+                    <label class="switch">        
+                            <input type="checkbox" value="1" {{pChecked}} name="p">
+                            <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                            C: 
+                        </div>
+                <div class="col-1">
+                    <label class="switch">        
+                            <input type="checkbox" value="1" {{cChecked}} name="c">
+                            <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                            R: 
+                        </div>
+                <div class="col-1">
+                    <label class="switch">        
+                            <input type="checkbox" value="1" {{rChecked}} name="r">
+                            <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                            DC: 
+                        </div>
+                <div class="col-1">
+                    <label class="switch">        
+                            <input type="checkbox" value="1" {{dcChecked}} name="dc">
+                            <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                            SLF: 
+                        </div>
+                <div class="col-1">
+                    <label class="switch">        
+                            <input type="checkbox" value="1" {{slfChecked}} name="slf">
+                            <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                            PRE: 
+                        </div>
+                <div class="col-1">
+                    <label class="switch">        
+                            <input type="checkbox" value="1" {{preChecked}} name="pre">
+                            <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-3">
+                        <input type="submit" value="Send">
+                    </div>
+            </div>
+          </div>
+    
+
+</form>
+{% endblock %}
+
+
